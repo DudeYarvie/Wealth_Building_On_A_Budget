@@ -30,17 +30,17 @@ def main():
     years_gone_by = 0.00         #Years money is tied up in CD, including amt made on interest
     
     
-    ##Determines how long it will to reach money goal
+    ##Determines how long it will take to reach money goal
     while (made_money < (money_goal-deposit_amount)):
-        interest_money_made += deposit_amount*cd_interest_rate              #Money made on interest at the end of each CD term
-        deposit_amount += interest_money_made                               #Calculate the roll-over deposit amount for the next CD cycle/duration.
+        interest_money_made += deposit_amount*cd_interest_rate              #Money made on interest at the end of each CD duration/cycle
+        deposit_amount += interest_money_made                               #Calculate the roll-over deposit amount for the next CD cycle
         months_gone_by += cd_duration                                       #Stores the total time it takes for money goal to be reached.
-                                                                            #money needs to be immediately rolled over from CD cycle to the next. No breaks.
+                                                                            #Money needs to be immediately rolled over from one CD cycle to the next. No breaks.
         print ("Interest money made in CD: $%0.2f" %interest_money_made)    #Prints the money made after each CD cycle
         print ("Total money: $%0.2f" %deposit_amount)                       #Prints the accumulated money at the end of each CD cycle    
         
         
-    years_gone_by = months_gone_by/12.0                                     #Calculates it took to reach the money goal.    
+    years_gone_by = months_gone_by/12.0                                     #Calculates how long it took to reach the money goal.    
     print("Time for money made from interest to reach college cost: %d months (%0.2f years)" %(months_gone_by,years_gone_by))
     
 
